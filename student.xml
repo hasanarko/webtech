@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentList[
+<!ELEMENT studentList (student*)>
+<!ELEMENT student (name, id, cgpa, coursetaken)>
+<!ELEMENT coursetaken (course*)>
+<!ELEMENT course (CName,Sec,Grade)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT cgpa (#PCDATA)>
+<!ELEMENT Cname (#PCDATA)>
+<!ELEMENT Sec (#PCDATA)>
+<!ELEMENT Grade (#PCDATA)>
+ ]>
+<studentList>
+
+   <student>
+     <name>Name:ARKO</name><br>
+     <id>ID:12-21211-2</id><br>
+     <cgpa>Cgpa:3.25</cgpa><br>
+     <coursetaken>
+		<course Number='1'>
+				<CName>Web tech</CName><br>
+				<Sec>D</Sec><br>
+				<Grade>A+</Grade><br>
+		</course>
+		<course Number='2'>
+			<CName>Computer Graphis</CName><br>
+			<Sec>D</Sec><br>
+			<Grade>A+</Grade><br>
+		</course>
+		</coursetaken>
+  
+  </student>
+
+  <student>
+  <name>Hasan</name>
+    <id>12-21221-2</id>
+    <cgpa>3.86</cgpa>
+    <coursetaken>
+		<course Number='1'>
+				<CName>Web tech</CName>
+			<Sec>D</Sec>
+			<Grade>A+</Grade>
+			</course>
+			<course Number='2'>
+				<CName>Computer Graphis</CName>
+			<Sec>D</Sec>
+			<Grade>A+</Grade>
+			</course>
+		</coursetaken>
+  </student>
+    
+</studentList>                

@@ -1,21 +1,17 @@
-<html>  
-<body>
-<body style="background-color:powderblue;">
-		   <table border ="1px">
-		   <tr>
-		 <th><h1 align ="center">SignIn page</h1> </th>
-		  
-</tr>
-<th>
-<form align="center" action="logcheck.php" method="post">
-Username: <input type="text" name="Uname" required><br><br>
-Password: <input type="password" name="pass" required><br>
+<?php
+$dom = simplexml_load_file("student.xml");
 
-	<pre>   
-       <input type="submit" name="submit" value="login" formaction="homepage.php">     <input type="submit" name="register" value="register" formaction = "register.php">  
-	   </pre>
-	   </th>
-</table>
-</form>
-</body>
-</html>
+foreach($dom->student as $s)
+{
+	echo "<h2>$s->name - $s->id - $s->cgpa</h2>"."<br>";
+	echo "<h4>coursetaken:</h4>";
+	
+	foreach($s->coursetaken->course as $C){
+		echo "<li>".$C->CName."</li>";
+		echo "<li>".$C->Sec."</li>";
+		echo "<li>".$C->Grade."</li>";
+	}
+	
+	}
+
+?>
